@@ -66,7 +66,7 @@
       "description": "A full-featured personal blog platform built with TypeScript, supporting post creation, category filtering, and a clean reading experience. Optimised for both desktop and mobile with a focus on typography and content clarity.",
       "techStack": ["TypeScript", "React", "CSS Modules"],
       "imageUrl": "/ian-creative.jpg",
-      "liveUrl": "",
+      "liveUrl": "https://ian-blog-site.vercel.app",
       "githubUrl": "https://github.com/iankinoti-cloud/ian_blog_site",
       "dateAdded": "2026-05-03"
     },

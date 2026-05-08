@@ -119,7 +119,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 | Shop Ease Catalog | JavaScript, HTML, CSS, REST API | [repo](https://github.com/iankinoti-cloud/shop-ease-catalog) |
 | My Portfolio | TypeScript, React, CSS Modules | [repo](https://github.com/iankinoti-cloud/my_portfolio) |
 | Voting Poll App | JavaScript, HTML, CSS | [repo](https://github.com/iankinoti-cloud/voting_poll_app) |
-| Ian Blog Site | TypeScript, React, CSS Modules | [repo](https://github.com/iankinoti-cloud/ian_blog_site) |
+| Ian Blog Site | TypeScript, React, CSS Modules | [repo](https://github.com/iankinoti-cloud/ian_blog_site) | [live](https://ian-blog-site.vercel.app) |
 | Dynamic Product Dashboard | JavaScript, HTML, CSS, REST API | [repo](https://github.com/iankinoti-cloud/Dynamic_product_dashboard) |
 
 ---

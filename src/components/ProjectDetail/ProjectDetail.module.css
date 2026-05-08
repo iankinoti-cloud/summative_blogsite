@@ -1,9 +1,23 @@
+/* ─── Entrance Animations ──────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Container ────────────────────────────────────────────────── */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
+  animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* ─── Back Button ──────────────────────────────────────────────── */
 .backBtn {
   display: inline-flex;
   align-items: center;
@@ -15,12 +29,15 @@
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   margin-bottom: 2rem;
-  transition: color var(--transition), border-color var(--transition), background-color var(--transition);
+  transition: color var(--transition), border-color var(--transition),
+              background-color var(--transition);
 }
 
 .backBtn::before {
   content: '\2190';
   font-size: 1rem;
+  display: inline-block;
+  transition: transform var(--transition);
 }
 
 .backBtn:hover {
@@ -29,6 +46,11 @@
   background-color: var(--color-accent-muted);
 }
 
+.backBtn:hover::before {
+  transform: translateX(-4px);
+}
+
+/* ─── Hero ─────────────────────────────────────────────────────── */
 .hero {
   position: relative;
   width: 100%;
@@ -37,6 +59,14 @@
   aspect-ratio: 16 / 9;
   margin-bottom: 2.5rem;
   background-color: var(--color-surface-raised);
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.hero:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-accent);
 }
 
 .heroImage {
@@ -44,6 +74,12 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.hero:hover .heroImage {
+  transform: scale(1.04);
 }
 
 .heroOverlay {
@@ -55,6 +91,12 @@
     rgba(15, 15, 19, 0.4) 60%,
     transparent 100%
   );
+  opacity: 0.9;
+  transition: opacity 0.4s ease;
+}
+
+.hero:hover .heroOverlay {
+  opacity: 0.72;
 }
 
 .heroContent {
@@ -67,12 +109,15 @@
   gap: 0.4rem;
 }
 
+/* ─── Hero Title / Date ────────────────────────────────────────── */
 .title {
   font-size: clamp(1.6rem, 4vw, 2.5rem);
   font-weight: 800;
   color: var(--color-text-primary);
   line-height: 1.2;
   letter-spacing: -0.03em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+  animation: slideUp 0.55s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .date {
@@ -81,8 +126,10 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  animation: slideUp 0.55s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* ─── Body Layout ──────────────────────────────────────────────── */
 .body {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -128,6 +175,7 @@
   line-height: 1.8;
 }
 
+/* ─── Tech Tags ────────────────────────────────────────────────── */
 .techList {
   list-style: none;
   display: flex;
@@ -145,8 +193,21 @@
   padding: 0.35rem 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  cursor: default;
+  transition: transform var(--transition), border-color var(--transition),
+              box-shadow var(--transition), color var(--transition),
+              background-color var(--transition);
 }
 
+.techTag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(108, 99, 255, 0.55);
+  box-shadow: 0 4px 14px rgba(108, 99, 255, 0.22);
+  color: var(--color-accent-hover);
+  background-color: rgba(108, 99, 255, 0.2);
+}
+
+/* ─── Sidebar ──────────────────────────────────────────────────── */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -163,6 +224,12 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 28px rgba(108, 99, 255, 0.14);
 }
 
 .cardTitle {
@@ -179,6 +246,7 @@
   gap: 0.6rem;
 }
 
+/* ─── Link Buttons ─────────────────────────────────────────────── */
 .linkBtn {
   display: block;
   text-align: center;
@@ -188,12 +256,14 @@
   font-weight: 700;
   color: #fff;
   background-color: var(--color-accent);
-  transition: background-color var(--transition), transform var(--transition);
+  transition: background-color var(--transition), transform var(--transition),
+              box-shadow var(--transition);
 }
 
 .linkBtn:hover {
   background-color: var(--color-accent-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(108, 99, 255, 0.4);
 }
 
 .linkBtnGhost {
@@ -206,6 +276,7 @@
   background-color: var(--color-surface-raised);
   color: var(--color-text-primary);
   border-color: var(--color-accent);
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.15);
 }
 
 .linkMissing {
@@ -214,6 +285,7 @@
   font-style: italic;
 }
 
+/* ─── Delete Button ────────────────────────────────────────────── */
 .deleteBtn {
   width: 100%;
   padding: 0.65rem 1rem;
@@ -223,11 +295,13 @@
   color: var(--color-danger);
   border: 1px solid rgba(239, 68, 68, 0.3);
   background-color: rgba(239, 68, 68, 0.06);
-  transition: background-color var(--transition), border-color var(--transition), transform var(--transition);
+  transition: background-color var(--transition), border-color var(--transition),
+              transform var(--transition), box-shadow var(--transition);
 }
 
 .deleteBtn:hover {
   background-color: rgba(239, 68, 68, 0.14);
   border-color: var(--color-danger);
   transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.2);
 }

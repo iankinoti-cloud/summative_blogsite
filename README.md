@@ -8,8 +8,9 @@ A fully personalised, full-stack developer portfolio and project showcase - buil
 
 ## Live Preview
 
-| Project | Link |
+| | Link |
 |---|---|
+| **This Portfolio (LIVE)** | [summativeblogsite.vercel.app](https://summativeblogsite.vercel.app) |
 | My Portfolio | [my-portfolio-8fdc.vercel.app](https://my-portfolio-8fdc-peuzq8829-iankinoti-clouds-projects.vercel.app/) |
 | Varsity Introduction 2026 | [varsityintroduction2026.vercel.app](https://varsityintroduction2026.vercel.app) |
 

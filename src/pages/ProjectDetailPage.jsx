@@ -13,10 +13,12 @@ function ProjectDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const API_BASE = import.meta.env.VITE_API_URL || '/api/projects';
+
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch(`http://localhost:3001/projects/${id}`)
+    fetch(`${API_BASE}/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error('Project not found.');
         return res.json();

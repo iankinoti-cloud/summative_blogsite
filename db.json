@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Varsity Introduction 2026",
+      "description": "An interactive web introduction page built for the 2026 varsity cohort. Features smooth navigation, key information sections, and a welcoming design experience for incoming students — deployed and live on Vercel.",
+      "techStack": ["JavaScript", "HTML", "CSS"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "https://varsityintroduction2026.vercel.app",
+      "githubUrl": "https://github.com/iankinoti-cloud/varsityintroduction2026",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "2",
+      "title": "Wordly — SPA Word Game",
+      "description": "A Wordle-inspired word-guessing game built as a Single Page Application. Players get six attempts to guess a hidden five-letter word, with colour-coded hints (green, yellow, grey) after each guess to guide them to the answer.",
+      "techStack": ["JavaScript", "HTML", "CSS"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/iankinoti-cloud/singlepageapplicationwordly",
+      "dateAdded": "2026-04-14"
+    },
+    {
+      "id": "3",
+      "title": "Color Clock",
+      "description": "A creative clock that changes the background color based on the current time — each hour, minute, and second maps to a unique RGB value, resulting in a constantly shifting colour palette. A fun blend of art and code.",
+      "techStack": ["CSS", "JavaScript", "HTML"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/iankinoti-cloud/color-clock",
+      "dateAdded": "2026-04-28"
+    },
+    {
+      "id": "4",
+      "title": "Shop Ease Catalog",
+      "description": "A clean and responsive e-commerce product catalog with category filtering, keyword search, and a dynamic cart. Fetches product data from a public REST API and renders it with a fluid, user-friendly shopping interface.",
+      "techStack": ["JavaScript", "HTML", "CSS", "REST API"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/iankinoti-cloud/shop-ease-catalog",
+      "dateAdded": "2026-04-28"
+    },
+    {
+      "id": "5",
+      "title": "My Portfolio",
+      "description": "A personal developer portfolio built with TypeScript showcasing skills, projects, and experience. Features smooth animations, a fully responsive layout, and an elegant dark-themed design that highlights work in an engaging way.",
+      "techStack": ["TypeScript", "React", "CSS Modules"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "https://my-portfolio-8fdc-peuzq8829-iankinoti-clouds-projects.vercel.app/",
+      "githubUrl": "https://github.com/iankinoti-cloud/my_portfolio",
+      "dateAdded": "2026-05-02"
+    },
+    {
+      "id": "6",
+      "title": "Voting Poll App",
+      "description": "An interactive real-time voting and polling application where users can create polls, cast votes, and view live results. Designed for simplicity and responsiveness across all screen sizes with a clean, dynamic interface.",
+      "techStack": ["JavaScript", "HTML", "CSS"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/iankinoti-cloud/voting_poll_app",
+      "dateAdded": "2026-05-03"
+    },
+    {
+      "id": "7",
+      "title": "Ian Blog Site",
+      "description": "A full-featured personal blog platform built with TypeScript, supporting post creation, category filtering, and a clean reading experience. Optimised for both desktop and mobile with a focus on typography and content clarity.",
+      "techStack": ["TypeScript", "React", "CSS Modules"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/iankinoti-cloud/ian_blog_site",
+      "dateAdded": "2026-05-03"
+    },
+    {
+      "id": "8",
+      "title": "Dynamic Product Dashboard",
+      "description": "A feature-rich product management dashboard with dynamic filtering, sorting, and keyword search. Enables users to browse and manage a full product catalog with a clean, intuitive UI built entirely in vanilla JavaScript.",
+      "techStack": ["JavaScript", "HTML", "CSS", "REST API"],
+      "imageUrl": "/ian-creative.jpg",
+      "liveUrl": "",
+      "githubUrl": "https://github.com/iankinoti-cloud/Dynamic_product_dashboard",
+      "dateAdded": "2026-05-04"
+    }
+  ]
+}

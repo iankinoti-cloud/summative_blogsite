@@ -1,12 +1,33 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProjectList from '../components/ProjectList/ProjectList';
+import KineticTextLoader from '../components/ui/KineticTextLoader/KineticTextLoader';
+import DoubleStairs from '../components/ui/DoubleStairs/DoubleStairs';
 import useProjects from '../hooks/useProjects';
 import styles from './HomePage.module.css';
+
+const INTRO_KEY = 'ian-intro-seen';
+
+function hasSeenIntro() {
+  try {
+    return sessionStorage.getItem(INTRO_KEY) === '1';
+  } catch {
+    return true;
+  }
+}
+
+function markIntroSeen() {
+  try {
+    sessionStorage.setItem(INTRO_KEY, '1');
+  } catch {
+    // private-mode storage failures just mean the intro may replay
+  }
+}
 
 function HomePage() {
   const { projects, loading, error, deleteProject } = useProjects();
   const [search, setSearch] = useState('');
+  const [showIntro, setShowIntro] = useState(() => !hasSeenIntro());
 
   const filtered = projects.filter(
     (p) =>
@@ -16,6 +37,16 @@ function HomePage() {
 
   return (
     <main className={styles.main}>
+      {showIntro && (
+        <KineticTextLoader
+          active={loading}
+          onExited={() => {
+            markIntroSeen();
+            setShowIntro(false);
+          }}
+        />
+      )}
+
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <p className={styles.heroLabel}>Hi, I&apos;m Ian Kinoti</p>
@@ -53,10 +84,9 @@ function HomePage() {
         )}
 
         {loading && !error && (
-          <div className={styles.loadingGrid}>
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className={styles.skeleton}></div>
-            ))}
+          <div className={styles.loadingState}>
+            <DoubleStairs size={56} label="Loading projects" />
+            <p className={styles.loadingText}>Loading projects…</p>
           </div>
         )}
 

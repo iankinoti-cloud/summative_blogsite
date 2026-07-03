@@ -1,0 +1,63 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 115%, rgba(108, 99, 255, 0.16), transparent 60%),
+    var(--color-bg);
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1.25rem;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.letterMask {
+  display: inline-block;
+  overflow: hidden;
+  /* breathing room so rotated letters don't clip against the mask */
+  padding: 0.06em 0.01em;
+}
+
+.letter {
+  display: inline-block;
+  font-size: clamp(2.2rem, 10vw, 5.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  white-space: pre;
+  will-change: transform;
+}
+
+.tagline {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.skipHint {
+  position: absolute;
+  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}

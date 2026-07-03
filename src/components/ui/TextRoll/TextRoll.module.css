@@ -1,0 +1,51 @@
+/* Marker class — put on the hoverable ancestor (link/button) of a TextRoll */
+.trigger {
+}
+
+.roll {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  line-height: 1.25;
+  vertical-align: bottom;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.unit {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--i) * 22ms);
+  will-change: transform;
+}
+
+.face {
+  display: block;
+  white-space: pre;
+}
+
+.faceUnder {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.trigger:hover .unit,
+.trigger:focus-visible .unit {
+  transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unit {
+    transition: none;
+  }
+}

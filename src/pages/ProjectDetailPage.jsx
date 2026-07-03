@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ProjectDetail from '../components/ProjectDetail/ProjectDetail';
+import DoubleStairs from '../components/ui/DoubleStairs/DoubleStairs';
 import useProjects from '../hooks/useProjects';
 import styles from './ProjectDetailPage.module.css';
 
@@ -36,7 +37,7 @@ function ProjectDetailPage() {
   if (loading) {
     return (
       <div className={styles.centered}>
-        <div className={styles.spinner}></div>
+        <DoubleStairs size={48} label="Loading project" />
         <p className={styles.loadingText}>Loading project...</p>
       </div>
     );
